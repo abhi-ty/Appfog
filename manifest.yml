@@ -1,0 +1,25 @@
+---
+applications:
+  .:
+    name: abhi-ty
+    framework:
+      name: rails3
+      info:
+        mem: 256M
+        description: Rails Application
+        exec: 
+    infra: aws
+    url: ${name}.${target-base}
+    mem: 512M
+    instances: 1
+    services:
+      postgresql-b3faf:
+        type: postgresql
+      abhi-ty-mysql-9468:
+        type: mysql
+      abhi-ty-mysql-61593:
+        type: mysql
+      postgresql-ce24b:
+        type: postgresql
+      mysql-5786e:
+        type: mysql
